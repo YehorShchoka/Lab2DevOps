@@ -66,7 +66,6 @@ jobs:
       - name: Deploy to staging
         run: |
           echo "Deploying to staging..."
-          # kubectl set image deployment/app app=${{ needs.build.outputs.image-tag }}
 
   deploy-production:
     needs: [build, deploy-staging]
